@@ -19,9 +19,9 @@ def CircleIntersection(c1, c2):
     R2 = R * R
     R4 = c2.radius ** 2
     a = (c1.radius ** 2 - c2.radius ** 2) / (2 * R2)
-    r2r2 = c1.radius ** 2 - c2.radius ** 2
+    R6 = c1.radius ** 2 - c2.radius ** 2
     c = math.sqrt(2 * (c1.radius ** 2 + c2.radius ** 2) /
-                  R2 - (r2r2 * r2r2) / R4 - 1)
+                  R2 - (R6 * R6) / R4 - 1)
 
     fx = (c1_origin.x + c2_origin.x) / 2 + a * (c2_origin.x - c1_origin.x)
     gx = c * (c2_origin.y - c1_origin.y) / 2
